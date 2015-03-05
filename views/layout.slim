@@ -1,0 +1,29 @@
+doctype html 
+html
+  head 
+    == slim :"meta"
+
+    == css :application, :media => 'screen'
+    == js :application
+
+  body
+  
+    #flash-message
+      .container
+        - if flash[:success]
+          p.success 
+            span ✔ 
+            = flash[:success]
+
+        - if flash[:error]
+          p.error
+           span ✖ 
+           = flash[:error]
+
+    == slim :"navigation"
+
+    main
+      .container
+        == yield
+
+    == slim :"modal"

@@ -1,0 +1,10 @@
+section#user
+  .container
+    h1 Edit Your Data
+    hr
+
+    .edit-data
+      form.edit-form action="/users/#{@user.id}" method="POST"
+        == slim :"user/form_update"
+        input type="hidden" name="_method" value="PUT"
+        input.button type="submit" value="Update your Data"

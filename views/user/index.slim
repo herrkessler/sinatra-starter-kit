@@ -1,0 +1,8 @@
+.container
+    h1 User
+    == will_paginate @users, :previous_label => '◀', :next_label => '▶', :inner_window => '2', :page_links => false, :class => 'top-pagination pagination'
+    ul.user-list
+      - @users.each do |user|
+        == slim :"user/user", :locals => {user: user}
+
+    == will_paginate @users, :previous_label => '◀', :next_label => '▶', :inner_window => '2', :class => 'bottom-pagination pagination'

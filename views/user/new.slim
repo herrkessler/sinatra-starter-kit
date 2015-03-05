@@ -1,0 +1,6 @@
+section#login-wrapper
+  #signup-form
+    form action="/users" method="POST"
+      fieldset
+        == slim :"user/form_new"
+      input.button.full.highlight.reversed.signup.secondary type="submit" value="Sign Up"

@@ -1,0 +1,7 @@
+h1  = @user.forename
+hr
+.user-avatar
+  img src="#{@user.gravatarURL}"
+.user-edit-delete
+  a.button.admin href="/users/#{@user.id}/edit" EDIT
+  a.button.admin href="/users/#{@user.id}/delete" DELETE
